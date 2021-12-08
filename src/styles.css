@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+/*DISEÑO DE LA BARRA DE TEXTO*/
+
+html::-webkit-scrollbar-thumb {
+    background-color: #131f2c;
+    border-radius: 20px;
+    border: none;
+}
+
+html::-webkit-scrollbar-button:increment,
+html::-webkit-scrollbar-button {
+    display: none;
+}
+
+html::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+html::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+html::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    scroll-behavior: smooth;
+}
