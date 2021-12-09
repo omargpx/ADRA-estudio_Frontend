@@ -1,1 +1,32 @@
-<p>capacitaciones works!</p>
+<button type="button" class="float-right btn btn-primary mb-2" (click)="openDialog()">Nuevo</button>
+<div class="table-responsive">
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>descripcion</th>
+        <th>Portada</th>
+        <th>Fecha registro</th>
+        <th>fecha fin</th>
+        <th colspan="2" class="text-center">Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cap of capacitacion">
+        <td>{{cap.id_capacitacion}}</td>
+        <td>{{cap.nombre_capacitacion}}</td>
+        <td>{{cap.descripcion}}</td>
+        <td>{{cap.portada}}</td>
+        <td>{{cap.fecha_inicio}}</td>
+        <td>{{cap.fecha_fin}}</td>
+        <td class="text-center">
+          <button type="button" class="btn btn-warning">Editar</button>
+        </td>
+        <td class="text-center">
+          <button type="button" class="btn btn-danger">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

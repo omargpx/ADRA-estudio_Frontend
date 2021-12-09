@@ -4,28 +4,36 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './Home/landing-page/landing-page.component';
-import { ModalComponent } from './Home/modal/modal.component';
 import {NgbModal, ModalDismissReasons, NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {ReactiveFormsModule} from "@angular/forms";
 import { PortaSociaComponent } from './Socia/porta-socia/porta-socia.component';
 import { CapacitacionesComponent } from './Socia/capacitaciones/capacitaciones.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './Home/login/login.component';
-import { DashboardComponent } from './Home/dashboard/dashboard.component'
+import { DashboardComponent } from './Home/dashboard/dashboard.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PopupComponent } from './Socia/capacitaciones/popup/popup.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    ModalComponent,
     PortaSociaComponent,
     CapacitacionesComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

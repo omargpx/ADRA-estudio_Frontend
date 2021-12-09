@@ -1,0 +1,11 @@
+form{
+    width: 28rem;
+}
+form>.btns{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.btns>button{
+    margin-left: 0.5rem;
+}

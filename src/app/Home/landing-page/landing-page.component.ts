@@ -4,7 +4,6 @@ import * as AOS from 'aos';
 import { usuario } from 'src/app/Models/Usuario';
 import { UsuarioService } from 'src/app/Service/usuario.service';
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
-import { ModalComponent } from '../modal/modal.component';
 
 
 @Component({
@@ -60,6 +59,5 @@ export class LandingPageComponent implements OnInit {
   donar(){
     window.location.href = "https://www.adra.org.pe/donaciones/";
   }
-
 
 }

@@ -10,10 +10,10 @@
             </h4>
         </div>
         <div class="inputs">
-            <input type="text" class="form-control form-control-lg" placeholder="DNI" data-aos="fade-up" required>
-            <input type="password" class="form-control form-control-lg" placeholder="Contraseña" data-aos="fade-up" required>
+            <input type="text" #dni class="form-control form-control-lg" placeholder="DNI" data-aos="fade-up" required>
+            <input type="password" #pswd class="form-control form-control-lg" placeholder="Contraseña" data-aos="fade-up" required>
             <button type="button" class="btn btn-success btn-lg"
-                style="padding-left: 2.5rem; padding-right: 2.5rem;" data-aos="zoom-in-up">Ingresar</button>
+                style="padding-left: 2.5rem; padding-right: 2.5rem;" data-aos="zoom-in-up" (click)="Ingresar()">Ingresar</button>
         </div>
     </form>
 </div>

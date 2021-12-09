@@ -16,4 +16,8 @@ export class UsuarioService {
   getUsuarios(){
     return this.http.get<usuario[]>(this.Url);
   }
+
+  getUsuarioByEmail(email: number): Observable<IResponse>{
+    return this.http.get<IResponse>(`${this.Url}/${email}`);
+  }
 }
