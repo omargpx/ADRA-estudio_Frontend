@@ -1,4 +1,9 @@
-export class Usuario{
-    id_usuario:number;
-    clave:number;
+import { Observable } from "rxjs";
+import { Rol } from "./Rol";
+
+export class usuario {
+  id: number;
+  email:number;
+  clave: number;
+  roles:Rol[];
 }

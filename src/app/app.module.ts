@@ -8,14 +8,18 @@ import { ModalComponent } from './Home/modal/modal.component';
 import {NgbModal, ModalDismissReasons, NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { PortaSociaComponent } from './Socia/porta-socia/porta-socia.component';
 import { CapacitacionesComponent } from './Socia/capacitaciones/capacitaciones.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './Home/login/login.component';
+import { DashboardComponent } from './Home/dashboard/dashboard.component'
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     ModalComponent,
     PortaSociaComponent,
-    CapacitacionesComponent
+    CapacitacionesComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

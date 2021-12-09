@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Usuario } from '../Models/Usuario';
+import { IResponse } from '../Models/IResppnse';
+import { Observable } from 'rxjs';
+import { usuario } from '../Models/Usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -9,9 +11,9 @@ export class UsuarioService {
 
   constructor(private http:HttpClient) { }
 
-  Url='http://localhost:8080/api/usuario';
+  Url='http://localhost:8080/api/usuario/';
 
   getUsuarios(){
-    return this.http.get<Usuario[]>(this.Url);
+    return this.http.get<usuario[]>(this.Url);
   }
 }

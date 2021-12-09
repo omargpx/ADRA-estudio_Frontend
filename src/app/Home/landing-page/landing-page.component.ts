@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as AOS from 'aos';
-import { Usuario } from 'src/app/Models/Usuario';
+import { usuario } from 'src/app/Models/Usuario';
 import { UsuarioService } from 'src/app/Service/usuario.service';
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import { ModalComponent } from '../modal/modal.component';
+
 
 @Component({
   selector: 'app-landing-page',
@@ -12,12 +15,12 @@ import { UsuarioService } from 'src/app/Service/usuario.service';
 export class LandingPageComponent implements OnInit {
   title = 'ADRA estudio';
 
-  usuarios:Usuario[];
-  constructor(private serviceUsu:UsuarioService, private router:Router) {}
+  usuarios: usuario[];
+  constructor(private serviceUsu:UsuarioService, private router:Router,
+    private modalService:NgbModal) {}
 
   ngOnInit(): void {
-    this.serviceUsu.getUsuarios()
-    .subscribe(data=>{this.usuarios=data;})
+    this.getUsuarios();
     //animaciones
     AOS.init();
     //barra animation
@@ -38,11 +41,25 @@ export class LandingPageComponent implements OnInit {
     });
 
   }
+  getUsuarios(): void {
+    this.serviceUsu.getUsuarios()
+    .subscribe(Response=>{this.usuarios=Response;})
+  }
+
+  logIn(){
+    this.router.navigate(["login"]);
+    /*const modal = this.modalService.open(ModalComponent, {
+      size: "lg",
+      keyboard: false,
+      backdrop: 'static'
+    });
+    modal.componentInstance.title = "Ingresar"; console.log(this.getUsuarios())*/
+    console.log(this.usuarios)
+  }
 
   donar(){
     window.location.href = "https://www.adra.org.pe/donaciones/";
   }
 
-  
 
 }

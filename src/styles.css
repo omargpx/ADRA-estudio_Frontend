@@ -30,3 +30,6 @@ html {
     background-color: transparent;
     scroll-behavior: smooth;
 }
+body{
+    overflow-x: hidden;
+}
