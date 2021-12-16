@@ -1,0 +1,62 @@
+<div class="body">
+    <div></div>
+    <div class="content">
+        <div class="reflexion">
+            <div class="body-reflexion" data-aos="fade-left">
+                <div class="card">
+                    <div class="card-body">
+                        <h5> <b>Reflexión diaria</b> </h5>
+                        <p>This is some text within a card body. Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Officia debitis ratione ipsa libero ex! Modi necessitatibus accusamus commodi magni
+                            inventore! <b>Josue 1:9</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="avatar" data-aos="fade-up">
+                <img src="https://i.ibb.co/wgKhQsP/avtar-man.png" alt="">
+            </div>
+        </div>
+        <div class="tipo-matinal">
+            <div class="divisor"><h3>Devoción Matutina</h3></div>
+            <div class="cards-matinal">
+                <div class="card">
+                    <div class="card-body" (click)="cargarMatinal(1)">
+                        <img src="https://i.ibb.co/YXX0fyR/adulto.png" alt="">
+                        <h3>Adultos</h3>
+                    </div>
+                </div>
+                <div class="card" (click)="cargarMatinal(2)">
+                    <div class="card-body">
+                        <img src="https://i.ibb.co/GtBLMHR/mujer.png" alt="">
+                        <h3>Mujeres</h3>    
+                    </div>
+                </div>
+                <div class="card" (click)="cargarMatinal(3)">
+                    <div class="card-body">
+                        <img src="https://i.ibb.co/b6DrX2n/jovenes.png" alt="">
+                        <h3>Jovenes</h3>    
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="matinal">
+            <iframe src="https://devocionmatutina.com" title="load video" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen #loadMatinal></iframe>
+        </div>
+        <div class="pedidos">
+            <h5 data-aos="fade-right">Pedidos de oración</h5>
+            <hr color="gray">
+            <div class="content-pedido" data-aos="zoom-in">
+                <div class="form-floating cont-area">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                        maxlength="245" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Pedido de oración . . . </label>
+                </div>
+                <button><img src="https://i.ibb.co/8zZRfFm/manitas-white.png" alt=""></button>
+            </div>
+        </div>
+    </div>
+    <div></div>
+</div>

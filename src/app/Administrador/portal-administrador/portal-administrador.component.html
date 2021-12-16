@@ -1,0 +1,88 @@
+<app-nav-admin></app-nav-admin>
+<div class="body">
+    <div class="content-standar">
+        <div class="reflexion">
+            <div class="body-reflexion" data-aos="fade-left">
+                <div class="card">
+                    <div class="card-body">
+                        <h5> <b>Reflexión diaria</b> </h5>
+                        <p>This is some text within a card body. Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Officia debitis ratione ipsa libero ex! Modi necessitatibus accusamus commodi magni
+                            inventore! <b>Josue 1:9</b></p>
+                        <div class="foor-see-dm">
+                            <a href="devocion-matutina"><span>devocion matutina</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="avatar" data-aos="fade-up">
+                <img src="https://i.ibb.co/wgKhQsP/avtar-man.png" alt="">
+            </div>
+        </div>
+        <div class="title-activity">
+            <h5 data-aos="fade-right">Actividades</h5>
+            <hr color="gray">
+        </div>
+        <div class="actividades">
+            <div class="card" data-aos="zoom-in" (click)="gestionUsuarios()">
+                <div class="card-body">
+                    <img src="https://i.ibb.co/RDBK5RH/usuarios.png" alt="">
+                    <h3>Administración de Usuarios</h3>
+                </div>
+            </div>
+            <div class="card" data-aos="zoom-in">
+                <div class="card-body" (click)="gestionCapacitaciones()">
+                    <img src="https://i.ibb.co/HzRhCwM/capacitaciones-card.png" alt="">
+                    <h3>Capacitaciones</h3>
+                </div>
+            </div>
+            <div class="card" data-aos="zoom-in">
+                <div class="card-body">
+                    <img src="https://i.ibb.co/X4dLDxB/banquitos-card.png" alt="">
+                    <h3>Banquitos Comunales</h3>
+                </div>
+            </div>
+            <div class="card" data-aos="zoom-in">
+                <div class="card-body">
+                    <img src="https://i.ibb.co/mTg0QJT/pedidos-card.png" alt="">
+                    <h3>Pedidos de Oración</h3>
+                </div>
+            </div>
+            <div class="card" data-aos="zoom-in">
+                <div class="card-body">
+                    <img src="https://i.ibb.co/FDg6p45/recursos-card.png" alt="">
+                    <h3>Recursos</h3>
+                </div>
+            </div>
+        </div>
+        <div class="pedidos">
+            <h5 data-aos="fade-right">Pedidos de oración</h5>
+            <hr color="gray">
+            <div class="content-pedido" data-aos="zoom-in">
+                <div class="form-floating cont-area">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" maxlength="245"
+                        style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Pedido de oración . . . </label>
+                </div>
+                <button><img src="https://i.ibb.co/8zZRfFm/manitas-white.png" alt=""></button>
+            </div>
+        </div>
+    </div>
+    <div class="ranking">
+        <div class="estadistica">
+            <h5 data-aos="fade-right">Estadistica</h5>
+            <hr color="gray">
+        </div>
+        <div class="datos">
+            <div class="usuarios">
+                <span data-aos="fade-right">Total de Usuarios </span><b data-aos="fade-left">{{totalUsuarios}}</b>
+            </div>
+            <div class="banquitos">
+                <span data-aos="fade-right">Total de Banquitos </span><b data-aos="fade-left"> {{totalBancos}} </b>
+            </div>
+            <div class="capacitaciones">
+                <span data-aos="fade-right">Total de Capacitaciones </span><b data-aos="fade-left">{{totalCapacitacion}} </b>
+            </div>
+        </div>
+    </div>
+</div>

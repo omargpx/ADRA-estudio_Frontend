@@ -13,11 +13,16 @@ export class UsuarioService {
 
   Url='http://localhost:8080/api/usuario/';
 
+  personaService='http://localhost:8080/api/persona/';
+
   getUsuarios(){
     return this.http.get<usuario[]>(this.Url);
   }
 
   getUsuarioByEmail(email: number): Observable<IResponse>{
     return this.http.get<IResponse>(`${this.Url}/${email}`);
+  }
+  getDataPersonaByDni(dni:number): Observable <IResponse>{
+    return this.http.get<IResponse>(`${this.personaService}/${dni}`);
   }
 }

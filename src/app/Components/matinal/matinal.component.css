@@ -1,0 +1,182 @@
+.body {
+  width: 100%;
+  margin-top: 4%;
+  height: max-content;
+  display: grid;
+  grid-template-columns: 15% auto 15%;
+  padding-bottom: 10px;
+}
+.reflexion {
+  display: grid;
+  grid-template-columns: auto 5%;
+  column-gap: 2rem;
+}
+.reflexion > .avatar {
+  padding-top: 1.5em;
+}
+.reflexion > .body-reflexion > .card {
+  margin-top: 1%;
+  background: #dddddd;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+.body-reflexion > .card > h5 {
+  font-weight: bolder;
+  font-family: "Varela Round", sans-serif;
+}
+.body-reflexion > .card > p {
+  text-align: justify;
+  font-family: "Varela Round", sans-serif;
+}
+.body-reflexion > .card > .card-body > .foor-see-dm {
+  width: 100%;
+  background-color: #eee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 10px 10px;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
+  -ms-border-radius: 0 0 10px 10px;
+  -o-border-radius: 0 0 10px 10px;
+  text-align: center;
+}
+.body-reflexion > .card > .card-body > .foor-see-dm > a {
+  text-decoration: none;
+  color: #00868e;
+  font-weight: 600;
+}
+.body-reflexion > .card > .card-body > .foor-see-dm > a:hover {
+  color: #007a61;
+  transition: color 0.3s ease-in;
+  -webkit-transition: color 0.3s ease-in;
+  -moz-transition: color 0.3s ease-in;
+  -ms-transition: color 0.3s ease-in;
+  -o-transition: color 0.3s ease-in;
+}
+/*tarjetas de tipos de matinales*/
+.tipo-matinal {
+  margin-top: 1rem;
+  width: 100%;
+}
+.tipo-matinal > .divisor {
+  width: 100%;
+  background-color: #4f92ff;
+  color: white;
+  padding-left: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding-top: 5px;
+  cursor: default;
+}
+.tipo-matinal > .cards-matinal {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 1.5rem;
+}
+.cards-matinal > .card {
+  background-color: #eee;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+  border-bottom: 0.25rem solid #eee;
+}
+.cards-matinal > .card:hover {
+  transform: scale(1.03);
+  -webkit-transform: scale(1.03);
+  -moz-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  -o-transform: scale(1.03);
+  transition: transform 0.3s ease-in;
+  -webkit-transition: transform 0.3s ease-in;
+  -moz-transition: transform 0.3s ease-in;
+  -ms-transition: transform 0.3s ease-in;
+  -o-transition: transform 0.3s ease-in;
+  border-bottom: 0.25rem solid #007a61;
+}
+.cards-matinal > .card > .card-body {
+  display: flex;
+  flex-direction: row;
+  height: 5rem;
+  align-items: center;
+  text-align: center;
+}
+.card > .card-body > h3 {
+  color: #009475;
+  font-weight: bolder;
+  font-size: 22px;
+  margin-top: 1rem;
+  margin-left: 20%;
+}
+.matinal {
+  margin-top: 2rem;
+  width: 100%;
+}
+.matinal > iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  height: 40rem;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.pedidos {
+  margin-top: 2%;
+}
+.pedidos > h5,
+hr {
+  margin: 0;
+  padding: 0;
+  color: gray;
+}
+.pedidos > .content-pedido {
+  width: 90%;
+  margin-top: 2%;
+  display: grid;
+  grid-template-columns: auto 5%;
+  column-gap: 2rem;
+  align-items: center;
+}
+.pedidos > .content-pedido > .cont-area {
+  background-color: #eee;
+  padding: 6px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.pedidos > .content-pedido > button {
+  border: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  height: 50%;
+  width: 90%;
+  background: #007a61;
+}
+.pedidos > .content-pedido > button:hover {
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transition: transform 0.3s ease-in;
+  -webkit-transition: transform 0.3s ease-in;
+  -moz-transition: transform 0.3s ease-in;
+  -ms-transition: transform 0.3s ease-in;
+  -o-transition: transform 0.3s ease-in;
+}

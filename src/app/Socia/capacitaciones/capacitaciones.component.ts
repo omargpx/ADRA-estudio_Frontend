@@ -13,8 +13,7 @@ export class CapacitacionesComponent implements OnInit {
   capacitacion: any[];
   constructor(
     private capacitacionService: CapacitacionService,
-    private popUp: MatDialog
-  ) {}
+    private popUp:MatDialog) {}
 
   ngOnInit(): void {
     this.getCapacitaciones();

@@ -1,4 +1,5 @@
 export class Rol{
-    id:number;
-    rol: string;
+    id_rol:number;
+    no_rol: string;
+    img:string;
 }

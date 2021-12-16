@@ -3,7 +3,7 @@
         <img src="https://www.adra.org.pe/sites/default/files/ADRA%20Horizontal%20Logo_1.png" alt="" class="ad">
     </div>
     <div class="usuario">
-        <h5>Margaret Hamilton</h5>
+        <h5>{{persona.nombrePersona}} {{persona.apaternoPersona}}</h5>
         <div>
             <img src="https://i.ibb.co/WsQP4Yw/exit.png" alt="exit" (click)="cerrarSesion()">
         </div>
@@ -12,22 +12,22 @@
 
 <div class="body">
     <div class="roles">
-        <div class="card">
-            <div class="card-body" id="socia-card">
-                <img src="https://i.ibb.co/dLXLy0M/Portal-rol.png" alt="">
-                <h3>Socia</h3>
+        <div class="card" *ngIf="admin">
+            <div class="card-body" (click)="portalADM()">
+                <img src="https://i.ibb.co/2hKrXtL/user-solid-72.png" alt="">
+                <h3>Administrador</h3>
             </div>
         </div>
-        <div class="card" id="asesor-card">
-            <div class="card-body">
+        <div class="card" *ngIf="asesor">
+            <div class="card-body" (click)="portalAsesor()">
                 <img src="https://i.ibb.co/TRWtcs9/user-badge-solid-72.png" alt="">
                 <h3>Asesor</h3>
             </div>
         </div>
-        <div class="card" id="admin-card">
-            <div class="card-body">
-                <img src="https://i.ibb.co/2hKrXtL/user-solid-72.png" alt="">
-                <h3>Administrador</h3>
+        <div class="card" *ngIf="socia">
+            <div class="card-body" (click)="portalSocia()">
+                <img src="https://i.ibb.co/dLXLy0M/Portal-rol.png" alt="">
+                <h3>Socia</h3>
             </div>
         </div>
         <div class="card">
@@ -38,7 +38,22 @@
         </div>
     </div>
     <div class="banner">
-        <span></span>
+        <h2>Welcome {{persona.nombrePersona}} {{persona.apaternoPersona}} {{persona.apmaternoPersona}}  </h2>
+        <div class="publicity">
+            <div class="content-publicity">
+                <ul>
+                    <li>
+                        <a href="https://www.adra.org.pe/voluntariado"><img src="https://media-exp1.licdn.com/dms/image/C4D1BAQHsHv6cmgxtkw/company-background_10000/0/1611518325164?e=2159024400&v=beta&t=A-Uii-8_0hZJa0p8wsYr1M9ctx3x8cYOZOMEkReTgeE" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="https://www.adra.org.pe/voluntariado"><img src="https://files.adventistas.org/noticias/es/2019/07/19095650/ADRA-PARAGUAY-9-e1563541893410.jpeg" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="https://www.adra.org.pe/voluntariado"><img src="https://infonegocios.com.py/uploads/adra-paraguay-infosust3.jpg" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
     <span></span>
 </div>

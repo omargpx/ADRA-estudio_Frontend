@@ -27,5 +27,16 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
-  }
+  },
+  "types":{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+       "outDir": "../out-tsc/app",
+       "types": ["jquery", "bootstrap", "signalr"]
+    },
+    "exclude": [
+       "test.ts",
+       "**/*.spec.ts"
+    ]
+ }
 }

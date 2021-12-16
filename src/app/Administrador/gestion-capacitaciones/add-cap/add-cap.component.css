@@ -1,0 +1,8 @@
+form{
+    width: 30rem;
+}
+
+form>img{
+    height: 10rem;
+    object-fit: cover;
+}

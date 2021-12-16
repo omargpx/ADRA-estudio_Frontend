@@ -40,11 +40,12 @@ export class LoginComponent implements OnInit {
       if (contrasena.value != buscarUsuario.clave) {
         Swal.fire('Contraseña Incorrecta', 'error', 'error');
       } else {
-        Swal.fire('Correct', 'succes', 'success');
+        Swal.fire('Bienvenido', 'succes', 'success');
        // let roleUs: Rol[];
         //roleUs = buscarUsuario.roles;
         let dni:number = buscarUsuario.email;
         sessionStorage.setItem('dni', JSON.stringify(dni));
+        localStorage.setItem('roles',JSON.stringify(buscarUsuario.roles));
         this.router.navigate(['dashboard'])
       }
     }

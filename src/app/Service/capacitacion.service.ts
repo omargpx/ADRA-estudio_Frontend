@@ -9,7 +9,7 @@ import { IResponse } from '../Models/IResppnse';
 })
 export class CapacitacionService {
 
-  private apiURL: string = 'http://localhost:8080/api/capacitaciones';
+  apiURL = 'http://localhost:8080/api/capacitacion';
   constructor(private httpC:HttpClient) { }
 
   public listar(){

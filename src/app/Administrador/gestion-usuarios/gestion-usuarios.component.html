@@ -1,0 +1,55 @@
+<app-nav-admin></app-nav-admin>
+<div class="body">
+    <div class="title">
+        <h2>Gestión de Usuarios</h2>
+        <button (click)="openNewUsuario()"><span class="fas fa-plus"></span></button>
+    </div>
+    <div class="tablas">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Clave</th>
+                    <th scope="col">Rol</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let usuario of usuarios">
+                    <th scope="row"> {{usuario.id_usuario}} </th>
+                    <td> {{usuario.email}} </td>
+                    <td> {{usuario.clave}} </td>
+                    <td> {{usuario.roles[0].no_rol}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="title">
+        <h2>Tabla Personas</h2>
+        <button (click)="openNewUsuario()"><span class="fas fa-plus"></span></button>
+    </div>
+    <div class="tablas">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombres</th>
+                    <th scope="col">Apellidos</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">DNI</th>
+                    <th scope="col">Direccion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let persona of personas">
+                    <th scope="row"> {{persona.idPersona}} </th>
+                    <td> {{persona.nombrePersona}} </td>
+                    <td> {{persona.apaternoPersona}} {{ persona.apmaternoPersona }} </td>
+                    <td> {{persona.telefonoPersona}} </td>
+                    <td> {{persona.dnipersona}} </td>
+                    <td> {{persona.direccionPersona}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

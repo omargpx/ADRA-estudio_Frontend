@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import * as AOS from 'aos';
 
 @Component({
@@ -7,8 +8,8 @@ import * as AOS from 'aos';
   styleUrls: ['./porta-socia.component.css']
 })
 export class PortaSociaComponent implements OnInit {
-
-  constructor() { }
+  @ViewChild('menu') navMenu: ElementRef;
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     AOS.init();
@@ -30,5 +31,32 @@ export class PortaSociaComponent implements OnInit {
     });
   }
   
+  menuActive(): void {
+    const mainMenu = this.navMenu.nativeElement;
+    mainMenu.classList.add('active-menu');
+    mainMenu.classList.remove('close-menu');
+  }
+  menuClose():void{
+    const mainMenu = this.navMenu.nativeElement;
+    mainMenu.classList.add('close-menu');
+    mainMenu.classList.remove('active-menu');
+  }
+  cerrarSesion() {
+    sessionStorage.clear();
+    this.router.navigate(['landingPage']);
 
+    history.pushState(null, "null", 'no-back-button');
+    window.addEventListener('popstate', function (event) {
+      history.pushState(null, "null", 'no-back-button');
+    });
+  }
+  openAsesoria():void{
+    this.router.navigate(['asesoria']);
+  }
+  openCapacitaciones():void{
+    this.router.navigate(['capacitacion']);
+  }
+  bootcamp():void{
+    this.router.navigate(['sesion'])
+  }
 }

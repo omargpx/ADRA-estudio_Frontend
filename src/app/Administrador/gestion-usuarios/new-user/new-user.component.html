@@ -1,0 +1,36 @@
+<form [formGroup]="formUsuario" (ngSubmit)="guardarUsuario(formUsuario.value)">
+    <div class="mb-3">
+        <label for="cbx-per">Selecciona para dar acceso</label>
+        <select class="form-select" aria-label="Default select example" id="cbx-per" formControlName="persona">
+            <option selected>Seleccionar</option>
+            <option *ngFor="let persona of personas" value="{{persona.idPersona}}">{{persona.nombrePersona}}</option>
+        </select>
+    </div>
+    <div class="radios-btns">
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="access" id="onlyAcces" checked (click)="getTipoAcceso()">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Solo dar acceso
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="access" id="Rules" (click)="getTipoAcceso()">
+            <label class="form-check-label" for="flexRadioDefault2">
+                Dar Roles
+            </label>
+        </div>
+    </div>
+    <div class="mb-3" *ngIf="RolAcceso">
+        <label for="roles-cbx" class="form-label">Nombre capacitacion</label>
+        <select class="form-select" aria-label="Default select example" id="roles-cbx" formControlName="rol">
+            <option disabled selected>Seleccionar Rol</option>
+            <option value="1">Administrador</option>
+            <option value="2">Asesor</option>
+            <option value="3">Socia</option>
+        </select>
+    </div>
+    <div class="btns">
+        <button class="btn btn-danger" type="submit">Guardar</button>
+        <button class="btn btn-secondary" (click)="closeDialog()">Cancelar</button>
+    </div>
+</form>

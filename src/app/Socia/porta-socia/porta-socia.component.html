@@ -1,17 +1,4 @@
-<nav data-aos="fade-down">
-    <div class="menu-log">
-        <img src="https://i.ibb.co/GCy2H67/icons8-menu-24px.png" alt="" class="hamb">
-        <img src="https://www.adra.org.pe/sites/default/files/ADRA%20Horizontal%20Logo_1.png" alt="" class="ad">
-    </div>
-    <div class="usuario">
-        <h5>Margaret Hamilton</h5>
-        <div>
-            <img src="https://i.ibb.co/g3m02PC/perfil-woman.png" alt="p">
-            <img src="https://i.ibb.co/WsQP4Yw/exit.png" alt="exit">
-        </div>
-    </div>
-</nav>
-
+<app-nav-bar></app-nav-bar>
 <div class="body">
     <div class="capacitaciones">
         <div class="asincronico">
@@ -19,7 +6,7 @@
                 <img src="https://i.ibb.co/Wzd9VgK/icons8-conference-24px.png" alt="">
                 <h5>Capacitación Actual</h5>
             </div>
-            <div class="curso" data-aos="zoom-in">
+            <div class="curso" data-aos="zoom-in" (click)="bootcamp()">
                 <img src="https://1.bp.blogspot.com/-B2x__EhJ_R0/Xqe9ltGf6YI/AAAAAAAAlJo/SNKkr-nE5t4b7BTMOcjssACMgAXepc-IgCLcBGAsYHQ/s1600/Paradigma%2Btrabajo%2Bsocial.jpg"
                     alt="">
                 <div class="info-curso">
@@ -54,7 +41,7 @@
                             elit. Officia debitis ratione ipsa libero ex! Modi necessitatibus accusamus commodi magni
                             inventore! <b>Josue 1:9</b></p>
                         <div class="foor-see-dm">
-                            <a href=""><span>devocion matutina</span></a>
+                            <a href="/asesoria"><span>devocion matutina</span></a>
                         </div>
                     </div>
                 </div>
@@ -65,13 +52,13 @@
         </div>
         <div class="card-activity" data-aos="fade-up">
 
-            <div class="card">
+            <div class="card" (click)="openCapacitaciones()">
                 <div class="card-body">
                     <img src="https://i.ibb.co/WBnx6dJ/capacitacion.png" alt="">
                     <h3>Capacitaciones</h3>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" (click)="openAsesoria()">
                 <div class="card-body">
                     <img src="https://i.ibb.co/9c2qwQY/asesoria.png" alt="">
                     <h3>Asesoria</h3>

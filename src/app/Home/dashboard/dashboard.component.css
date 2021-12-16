@@ -36,7 +36,7 @@ nav > .menu-log > .ad {
   -webkit-filter: brightness(2) saturate(10%) contrast(250%);
 }
 nav > .usuario {
-  width: 25%;
+  width: max-content;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -56,19 +56,20 @@ nav > .usuario > div > img {
   opacity: 0.7;
   filter: brightness(2) saturate(10%) contrast(250%);
   -webkit-filter: brightness(2) saturate(10%) contrast(250%);
+  cursor: pointer;
 }
 .body{
-  padding-top: 2%;
+  margin-top: 3%;
   width: 100%;
   display: grid;
   grid-template-columns: 20% 80%;
   column-gap: 0;
-  height: 100vh;
+  height: 100%;
 }
 .roles{
   padding: 2rem;
-  margin-top: 3%;
   background: #ddd;
+  height: 100vh;
 }
 .roles > .card{
   height: 10rem;
@@ -101,4 +102,74 @@ nav > .usuario > div > img {
   -o-transition:border-bottom .3s ease-in;
   cursor: pointer;
   background: #231F20;
+}
+.banner{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3%;
+  text-align: center;
+}
+
+.publicity {
+  width: 55%;
+  padding: 7px;
+  background-color: #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.content-publicity {
+  height: 30rem;
+  margin: auto;
+  overflow: hidden;
+  padding-right: 1.5px;
+}
+
+.content-publicity ul {
+  width: 330%;
+  display: flex;
+  padding: 0;
+  animation: slider 20s infinite alternate;
+  animation-timing-function: ease-in;
+  height: inherit;
+}
+
+.content-publicity li {
+  list-style: none;
+  width: 110%;
+  height: 100%;
+  height: inherit;
+}
+
+.content-publicity a {
+  height: 100%;
+}
+
+.content-publicity img {
+  width: 100%;
+  height: 100%;
+  height: inherit;
+  object-fit: cover;
+  filter: contrast(110%) brightness(0.95);
+}
+@keyframes slider {
+  0% {
+      margin-left: 0;
+  }
+  30% {
+      margin-left: 0;
+  }
+  35% {
+      margin-left: -115%;
+  }
+  65% {
+      margin-left: -115%;
+  }
+  70% {
+      margin-left: -230%;
+  }
+  100% {
+      margin-left: -230%;
+  }
 }

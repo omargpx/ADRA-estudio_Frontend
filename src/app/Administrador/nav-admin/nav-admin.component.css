@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Georama:wght@600&family=Varela+Round&display=swap");
+nav {
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: #007960;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  scroll-behavior: smooth;
+  box-shadow: 0px 10px 8px -1px rgba(201, 201, 201, 0);
+  -webkit-box-shadow: 0px 10px 8px -1px rgba(201, 201, 201, 0);
+  -moz-box-shadow: 0px 10px 8px -1px rgba(201, 201, 201, 0);
+}
+nav > .menu-log {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+nav > .menu-log > .hamb {
+  height: 24px;
+  cursor: pointer;
+  filter: brightness(2) saturate(10%) contrast(250%);
+  -webkit-filter: brightness(2) saturate(10%) contrast(250%);
+}
+nav > .logo > a>.ad {
+  margin: 2rem;
+  width: 120px;
+  filter: brightness(2) saturate(10%) contrast(250%);
+  -webkit-filter: brightness(2) saturate(10%) contrast(250%);
+}
+nav > .usuario {
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+nav > .usuario h5 {
+  padding: 2px;
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 19px;
+  color: white;
+}
+nav > .usuario > div > img {
+  padding: 3px;
+}
+nav > .usuario > div > .avatar {
+  height: 42px;
+}
+.usuario > div > .exit {
+  filter: brightness(2) saturate(10%) contrast(250%);
+  -webkit-filter: brightness(2) saturate(10%) contrast(250%);
+}
+
+/*Menu left*/
+.menu {
+  position: fixed;
+  height: 100%;
+  width: 20%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  background-color: #007960;
+  z-index: 2;
+  box-shadow: 5px 0px 7px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 5px 0px 7px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 5px 0px 7px 4px rgba(0, 0, 0, 0.2);
+}
+.menu > .back {
+  cursor: pointer;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+}
+.menu > .back:hover {
+  background-color: #006954;
+}
+.menu > .links {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.menu > .links > a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 22px;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+.menu > .links > a:hover {
+  background-color: #006954;
+  transition: background-color 0.3s ease-in;
+  -webkit-transition: background-color 0.3s ease-in;
+  -moz-transition: background-color 0.3s ease-in;
+  -ms-transition: background-color 0.3s ease-in;
+  -o-transition: background-color 0.3s ease-in;
+}
+.active-menu {
+  transform: translateX(0);
+  left: 0;
+  transition: transform 0.5s ease-in;
+  -webkit-transition: transform 0.5s ease-in;
+  -moz-transition: transform 0.5s ease-in;
+  -ms-transition: transform 0.5s ease-in;
+  -o-transition: transform 0.5s ease-in;
+}
+.close-menu {
+  transform: translateX(-100%);
+  left: 0;
+  transition: transform 0.5s ease-in;
+  -webkit-transition: transform 0.5s ease-in;
+  -moz-transition: transform 0.5s ease-in;
+  -ms-transition: transform 0.5s ease-in;
+  -o-transition: transform 0.5s ease-in;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+}
