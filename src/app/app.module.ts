@@ -25,6 +25,8 @@ import { NewUserComponent } from './Administrador/gestion-usuarios/new-user/new-
 import { FormBuilder, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { GestionCapacitacionesComponent } from './Administrador/gestion-capacitaciones/gestion-capacitaciones.component';
 import { AddCapComponent } from './Administrador/gestion-capacitaciones/add-cap/add-cap.component';
+import { ContentCapacitacionComponent } from './Administrador/gestion-capacitaciones/content-capacitacion/content-capacitacion.component';
+import { PoVideoComponent } from './Components/po-video/po-video.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { AddCapComponent } from './Administrador/gestion-capacitaciones/add-cap/
     GestionUsuariosComponent,
     NewUserComponent,
     GestionCapacitacionesComponent,
-    AddCapComponent
+    AddCapComponent,
+    ContentCapacitacionComponent,
+    PoVideoComponent
   ],
   imports: [
     BrowserModule,

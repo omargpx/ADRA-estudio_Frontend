@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddCapComponent } from './add-cap/add-cap.component';
+import { ContentCapacitacionComponent } from './content-capacitacion/content-capacitacion.component';
 
 @Component({
   selector: 'app-gestion-capacitaciones',
@@ -9,6 +10,7 @@ import { AddCapComponent } from './add-cap/add-cap.component';
 })
 export class GestionCapacitacionesComponent implements OnInit {
 
+  idCapacitacion:number;
   constructor(private dialog:MatDialog) { }
 
   ngOnInit(): void {
@@ -17,8 +19,7 @@ export class GestionCapacitacionesComponent implements OnInit {
   newCapacitacion():void{
     this.dialog.open(AddCapComponent);
   }
-
-  loadImg(){
-
+  openContentCap():void{
+    this.dialog.open(ContentCapacitacionComponent);
   }
 }

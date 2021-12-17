@@ -47,3 +47,56 @@
     column-gap: 1rem;
     row-gap: 1rem;
 }
+.card{
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.card:hover{
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transition: transform .3s ease-in;
+    -webkit-transition: transform .3s ease-in;
+    -moz-transition: transform .3s ease-in;
+    -ms-transition: transform .3s ease-in;
+    -o-transition: transform .3s ease-in;
+    cursor: pointer;
+}
+.card-body{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+}
+.card-body>img{
+    width: 100px;
+    object-fit: cover;
+}
+.titulo{
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.titulo> h2,p{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+}
+.card-body>.titulo>p{
+    color: rgb(65, 65, 65);
+    cursor: pointer;
+}
+.card-body>.titulo>p:hover{
+    color: #009475;
+    transition: color .3s ease-in;
+    -webkit-transition: color .3s ease-in;
+    -moz-transition: color .3s ease-in;
+    -ms-transition: color .3s ease-in;
+    -o-transition: color .3s ease-in;
+}

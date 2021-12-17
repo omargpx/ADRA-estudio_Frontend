@@ -1,0 +1,10 @@
+table{
+    width: 30rem;
+}
+table>tbody>tr>td{
+    height: min-content;
+    max-height: 1rem;
+    overflow: hidden;
+    max-width: 25rem;
+    text-align: justify;
+}

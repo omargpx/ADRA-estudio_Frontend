@@ -184,3 +184,7 @@ hr {
     justify-content: space-between;
     margin-bottom: 0.5rem;
 }
+.spinner-border{
+  width: 15px;
+  height: 15px;
+}

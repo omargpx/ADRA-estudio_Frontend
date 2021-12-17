@@ -60,11 +60,12 @@
             <hr color="gray">
             <div class="content-pedido" data-aos="zoom-in">
                 <div class="form-floating cont-area">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" maxlength="245"
-                        style="height: 100px"></textarea>
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                        maxlength="245" style="height: 100px" #contentPedido></textarea>
                     <label for="floatingTextarea2">Pedido de oración . . . </label>
                 </div>
-                <button><img src="https://i.ibb.co/8zZRfFm/manitas-white.png" alt=""></button>
+                <button (click)="registrarPedido()"><img src="https://i.ibb.co/8zZRfFm/manitas-white.png"
+                        alt=""></button>
             </div>
         </div>
     </div>
@@ -75,13 +76,27 @@
         </div>
         <div class="datos">
             <div class="usuarios">
-                <span data-aos="fade-right">Total de Usuarios </span><b data-aos="fade-left">{{totalUsuarios}}</b>
+                <span data-aos="fade-right">Total de Usuarios </span><b data-aos="fade-left">{{totalUsuarios}}<div
+                        class="spinner-border text-secondary" role="status" *ngIf="loadUsu">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </b>
             </div>
             <div class="banquitos">
-                <span data-aos="fade-right">Total de Banquitos </span><b data-aos="fade-left"> {{totalBancos}} </b>
+                <span data-aos="fade-right">Total de Banquitos </span><b data-aos="fade-left"> {{totalBancos}}
+                    <div
+                        class="spinner-border text-secondary" role="status" *ngIf="loadBancos">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </b>
             </div>
             <div class="capacitaciones">
-                <span data-aos="fade-right">Total de Capacitaciones </span><b data-aos="fade-left">{{totalCapacitacion}} </b>
+                <span data-aos="fade-right">Total de Capacitaciones </span><b data-aos="fade-left">{{totalCapacitacion}}
+                    <div
+                        class="spinner-border text-secondary" role="status" *ngIf="loadCap">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </b>
             </div>
         </div>
     </div>

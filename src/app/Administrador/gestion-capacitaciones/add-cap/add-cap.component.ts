@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddCapComponent implements OnInit {
 
+  btnDisabled:boolean=false;
+  nextForm:boolean=false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  loadImg(){
+    
+  }
+  siguienteForm(){
+    this.nextForm=true;
+    this.btnDisabled=true;
   }
 
 }

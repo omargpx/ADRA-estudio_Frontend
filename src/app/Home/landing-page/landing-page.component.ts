@@ -4,6 +4,8 @@ import * as AOS from 'aos';
 import { usuario } from 'src/app/Models/Usuario';
 import { UsuarioService } from 'src/app/Service/usuario.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { MatDialog } from '@angular/material/dialog';
+import { PoVideoComponent } from 'src/app/Components/po-video/po-video.component';
 
 @Component({
   selector: 'app-landing-page',
@@ -17,7 +19,7 @@ export class LandingPageComponent implements OnInit {
   constructor(
     private serviceUsu: UsuarioService,
     private router: Router,
-    private modalService: NgbModal
+    private dialog:MatDialog
   ) {}
 
   ngOnInit(): void {
@@ -63,5 +65,19 @@ export class LandingPageComponent implements OnInit {
 
   donar() {
     window.location.href = 'https://www.adra.org.pe/donaciones/';
+  }
+  openPop(N:number){
+    console.log(N)
+    if(N==1){
+      localStorage.setItem('urlVideo','https://www.youtube.com/embed/dlOA3szA8zU');
+      this.dialog.open(PoVideoComponent);
+    }else if(N==2){
+      localStorage.setItem('urlVideo','');
+      this.dialog.open(PoVideoComponent);
+    }else{
+      localStorage.setItem('urlVideo','');
+      this.dialog.open(PoVideoComponent);
+    }
+    
   }
 }

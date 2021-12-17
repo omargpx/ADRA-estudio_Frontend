@@ -1,0 +1,170 @@
+<nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+            role="tab" aria-controls="nav-home" aria-selected="true">Sesion 1</button>
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
+            role="tab" aria-controls="nav-profile" aria-selected="false">Sesion 2</button>
+        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button"
+            role="tab" aria-controls="nav-contact" aria-selected="false">Sesion 3</button>
+    </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <button class="btn btn-primary m-2" (click)="nuevoRecurso()">{{titleButton}}</button>
+        <form *ngIf="formNewRecurso"> 
+            <div class="mb-3">
+                <input type="text" class="form-control" id="no_sesion" aria-describedby="emailHelp"
+                    placeholder="Titulo">
+            </div>
+            <div class="mt-2 mb-2">
+                <select class="form-select" aria-label="Default select example" (click)="tipoRecurso()" #tipRecurso>
+                    <option selected>Tipo de recurso</option>
+                    <option value="1">pdf</option>
+                    <option value="2">img</option>
+                    <option value="3">video</option>
+                    <option value="4">Url</option>
+                </select>
+            </div>
+            <div class="mb-3" *ngIf="archivo">
+                <label for="formFile" class="form-label">Seleccionar archivo</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="input-group mb-3" *ngIf="Url">
+                <span class="input-group-text" id="basic-addon3">Url</span>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+              </div>
+            <button type="submit" class="btn btn-danger mt-3">Guardar</button>
+        </form>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Url</th>
+                    <th scope="col">Tipo Recurso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Tema</td>
+                    <td>https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80</td>
+                    <td>3</td>
+                </tr>
+             
+            </tbody>
+        </table>
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        <button class="btn btn-primary m-2" (click)="nuevoRecurso()">{{titleButton}}</button>
+        <form *ngIf="formNewRecurso"> 
+            <div class="mb-3">
+                <input type="text" class="form-control" id="no_sesion" aria-describedby="emailHelp"
+                    placeholder="Titulo">
+            </div>
+            <div class="mt-2 mb-2">
+                <select class="form-select" aria-label="Default select example" (click)="tipoRecurso()" #tipRecurso>
+                    <option selected>Tipo de recurso</option>
+                    <option value="1">pdf</option>
+                    <option value="2">img</option>
+                    <option value="3">video</option>
+                    <option value="4">Url</option>
+                </select>
+            </div>
+            <div class="mb-3" *ngIf="archivo">
+                <label for="formFile" class="form-label">Seleccionar archivo</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="input-group mb-3" *ngIf="Url">
+                <span class="input-group-text" id="basic-addon3">Url</span>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+              </div>
+            <button type="submit" class="btn btn-danger mt-3">Guardar</button>
+        </form>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Url</th>
+                    <th scope="col">Tipo Recurso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+        <button class="btn btn-primary m-2" (click)="nuevoRecurso()">{{titleButton}}</button>
+        <form *ngIf="formNewRecurso"> 
+            <div class="mb-3">
+                <input type="text" class="form-control" id="no_sesion" aria-describedby="emailHelp"
+                    placeholder="Titulo">
+            </div>
+            <div class="mt-2 mb-2">
+                <select class="form-select" aria-label="Default select example" (click)="tipoRecurso()" #tipRecurso>
+                    <option selected>Tipo de recurso</option>
+                    <option value="1">pdf</option>
+                    <option value="2">img</option>
+                    <option value="3">video</option>
+                    <option value="4">Url</option>
+                </select>
+            </div>
+            <div class="mb-3" *ngIf="archivo">
+                <label for="formFile" class="form-label">Seleccionar archivo</label>
+                <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="input-group mb-3" *ngIf="Url">
+                <span class="input-group-text" id="basic-addon3">Url</span>
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+              </div>
+            <button type="submit" class="btn btn-danger mt-3">Guardar</button>
+        </form>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Url</th>
+                    <th scope="col">Tipo Recurso</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

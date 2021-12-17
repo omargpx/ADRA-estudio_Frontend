@@ -1,8 +1,23 @@
 form{
-    width: 30rem;
+    width: 25rem;
 }
 
 form>img{
     height: 10rem;
     object-fit: cover;
+}
+form>button{
+    float: right;
+}
+.row-cap{
+    display: flex;
+    flex-direction: row;
+}
+.row-cap>.sesiones{
+    display: inherit;
+    flex-direction: column;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    min-height: 25rem;
+    width: 25rem;
 }
