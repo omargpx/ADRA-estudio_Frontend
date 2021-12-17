@@ -14,7 +14,7 @@
     <p>ADRA es una de las principales organizaciones no gubernamentales de ayuda en el mundo, presente en más de 130
       países. En el Perú, ADRA opera desde 1965, llevando alivio al necesitado, promoviendo su desarrollo integral y
       brindando ayuda humanitaria en caso de desastres.</p>
-    <button class="btn btn-danger"> <span>Iniciar Sesión</span></button>
+    <button class="btn btn-danger" (click)="logIn()"> <span>Iniciar Sesión</span></button>
   </div>
   <img src="https://i.ibb.co/f1rRd4W/asistente-adra.png" alt="asistente-adra" data-aos="zoom-in">
 </div>
@@ -107,8 +107,8 @@
       </div>
       <div class="botones">
         <button (click)="openPop(1)">Capacitaciones</button>
-        <button>Desarrollo Espiritual</button>
-        <button>Webinar</button>
+        <button (click)="openPop(2)">Desarrollo Espiritual</button>
+        <button (click)="openPop(3)">Webinar</button>
       </div>
     </div>
   </div>

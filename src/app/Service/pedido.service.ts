@@ -12,7 +12,7 @@ export class PedidoService {
   Url='http://localhost:8080/api/pedidos';
 
   guardarPedido(data:Pedido){
-    return this.http.post<Pedido>(this.Url, data);
+    return this.http.post<Pedido[]>(this.Url, data);
   }
 
 }

@@ -27,7 +27,7 @@
             </div>
             <div class="mb-3" *ngIf="archivo">
                 <label for="formFile" class="form-label">Seleccionar archivo</label>
-                <input class="form-control" type="file" id="formFile">
+                <input class="form-control" type="file" id="formFile" (input)="onInput($event)" >
             </div>
             <div class="input-group mb-3" *ngIf="Url">
                 <span class="input-group-text" id="basic-addon3">Url</span>

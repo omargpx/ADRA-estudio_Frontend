@@ -69,13 +69,13 @@ export class LandingPageComponent implements OnInit {
   openPop(N:number){
     console.log(N)
     if(N==1){
-      localStorage.setItem('urlVideo','https://www.youtube.com/embed/dlOA3szA8zU');
+      localStorage.setItem('urlVideo',JSON.stringify('https://www.youtube.com/embed/dlOA3szA8zU'));
       this.dialog.open(PoVideoComponent);
     }else if(N==2){
-      localStorage.setItem('urlVideo','');
+      localStorage.setItem('urlVideo',JSON.stringify('https://youtu.be/X80yUCyoW1o'));
       this.dialog.open(PoVideoComponent);
     }else{
-      localStorage.setItem('urlVideo','');
+      localStorage.setItem('urlVideo',JSON.stringify('https://youtu.be/61s0adpDMqY'));
       this.dialog.open(PoVideoComponent);
     }
     

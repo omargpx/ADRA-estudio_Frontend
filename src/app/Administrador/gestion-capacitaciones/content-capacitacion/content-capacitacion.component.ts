@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ImgBBService } from 'src/app/Service/img-bb.service';
 
 @Component({
   selector: 'app-content-capacitacion',
@@ -12,7 +13,7 @@ export class ContentCapacitacionComponent implements OnInit {
   formNewRecurso:boolean=false;
   archivo:boolean=false;
   Url:boolean=false;
-  constructor() { }
+  constructor(private serviceImgBb:ImgBBService) { }
 
   ngOnInit(): void {
   }
@@ -42,4 +43,10 @@ export class ContentCapacitacionComponent implements OnInit {
       this.titleButton='Nuevo Recurso';
     }
   }
+
+  onInput(e:Event){
+    const input:any = e.target as HTMLInputElement;
+    this.serviceImgBb.upLoad(input.files[0]).subscribe(url=> console.log(url));
+  }
+
 }
